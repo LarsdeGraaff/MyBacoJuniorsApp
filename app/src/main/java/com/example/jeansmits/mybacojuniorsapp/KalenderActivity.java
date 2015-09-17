@@ -14,7 +14,6 @@ public class KalenderActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_kalender);
 
         LayoutInflater layoutInflater= (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view= layoutInflater.inflate(R.layout.activity_kalender, null, false);
