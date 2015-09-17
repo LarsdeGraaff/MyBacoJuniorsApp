@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".TeamActitvity"></activity>
+        <activity android:name=".KalenderActivity"></activity>
+        <activity android:name=".NieuwsActivity"></activity>
+        <activity android:name=".MultimediaActivity"></activity>
     </application>
 
 </manifest>

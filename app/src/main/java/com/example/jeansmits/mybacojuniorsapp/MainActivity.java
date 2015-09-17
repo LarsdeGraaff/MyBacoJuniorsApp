@@ -1,6 +1,7 @@
 package com.example.jeansmits.mybacojuniorsapp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     private void addDrawerItems() {
-        String[] osArray = { "Team", "Kalender", "Rangschikking" , "Nieuws"};
+        String[] osArray = { "Team", "Kalender", "Rangschikking" , "Nieuws", "MultiMedia"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
@@ -79,6 +80,18 @@ public class MainActivity extends AppCompatActivity{
                 switch (position) {
                     case 0:
                         teamAct(view);
+                        break;
+                    case 1:
+                        kalenderAct(view);
+                        break;
+                    case 2:
+                        rangschikkingAct(view);
+                        break;
+                    case 3:
+                        nieuwsAct(view);
+                        break;
+                    case 4:
+                        multimediaAct(view);
                         break;
 
 
@@ -96,8 +109,38 @@ public class MainActivity extends AppCompatActivity{
         mDrawerToggle.syncState();
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
     public void teamAct(View view){
         Intent intent= new Intent(this, TeamActitvity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void kalenderAct(View view){
+        Intent intent=new Intent(this, KalenderActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void rangschikkingAct(View view){
+        Intent intent=new Intent(this, RangschikkingActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void nieuwsAct(View view){
+        Intent intent=new Intent(this, NieuwsActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void multimediaAct(View view){
+        Intent intent=new Intent(this, MultimediaActivity.class);
         startActivity(intent);
         finish();
     }
