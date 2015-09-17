@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/bacoEmblem"
+        android:icon="@mipmap/baco_emblem"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -20,6 +20,8 @@
         <activity android:name=".KalenderActivity"></activity>
         <activity android:name=".NieuwsActivity"></activity>
         <activity android:name=".MultimediaActivity"></activity>
+        <activity android:name=".RangschikkingActivity"></activity>
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>
